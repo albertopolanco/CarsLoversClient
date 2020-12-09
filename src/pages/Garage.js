@@ -52,9 +52,9 @@ class Garage extends Component {
           
           </div>
         
-          <Link to={`/editUser/${this.props.user._id}`}>
+          <Link to={`/createcar/${this.props.user._id}`}>
           
-          <button className="profile-button">Edit Profile</button>
+          <button className="profile-button">Add your car</button>
         </Link>
         </section>
       </div>

@@ -27,7 +27,7 @@ import service from "../lib/auth-service";
             console.log(error);
         }
         // const { params } = this.props.match;
-        console.log(this.props.match.id, "333333333333333")
+        console.log(this.props.match._id, "333333333333333")
         // axios
         //   .get(`${process.env.REACT_APP_API_URI}/cardetail/${this.props.match.params.id}`)
         //   .then((carDetails) => {
@@ -58,7 +58,7 @@ import service from "../lib/auth-service";
       }
 
     render() {
-        //console.log(this.props.car.id, "ooooooooooooo")
+        console.log(this.props.user.id, "ooooooooooooo")
         return (
             <div className="">
             <h1>Car Details</h1>
