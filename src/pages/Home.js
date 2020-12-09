@@ -6,7 +6,9 @@ import axios from "axios";
 
 function Home(props) {
   return (
-    <h1>GARAGE</h1>
+    <div className="parking">
+      <h1>Entra en tu garage</h1>
+    </div>
   );
 }
 

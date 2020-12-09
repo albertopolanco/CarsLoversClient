@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { withAuth } from "../lib/AuthProvider";
-import service from "../lib/auth-service";
+// import service from "../lib/auth-service";
 import axios from "axios";
 
 class EditUser extends Component {

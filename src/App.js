@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import { Switch } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
@@ -8,7 +8,11 @@ import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import Private from "./pages/Private";
 import Profile from "./pages/Profile";
-import EditUser from "./pages/EditUser"
+import EditUser from "./pages/EditUser";
+import CreateCar from "./pages/CreateCar";
+import EditCar from "./pages/EditCar";
+import Garage from "./pages/Garage";
+import CarDetail from "./pages/CarDetail";
 
 import AuthProvider from "./lib/AuthProvider";
 
@@ -23,11 +27,15 @@ class App extends Component {
           <Navbar />
 
           <Switch>
-            <PrivateRoute exact path="/" component={Home} />
-            <PrivateRoute exact path="/profile/:id" component={Profile} />
-            <PrivateRoute exact path='/editUser/:id' component={EditUser} />
+            <Route exact path="/" component={Home} />
             <AnonRoute exact path="/signup" component={Signup} />
             <AnonRoute exact path="/login" component={Login} />
+            <PrivateRoute exact path="/profile/:id" component={Profile} />
+            <PrivateRoute exact path='/editUser/:id' component={EditUser} />
+            <PrivateRoute exact path='/editcar/:id' component={EditCar} />
+            <PrivateRoute exact path='/createcar/:id' component={CreateCar} />
+            <PrivateRoute exact path='/garage/:id' component={Garage} />
+            <PrivateRoute exact path='/cardetail/:id' component={CarDetail} />
             <PrivateRoute exact path="/private" component={Private} />
           </Switch>
         </div>

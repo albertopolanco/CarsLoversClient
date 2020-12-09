@@ -11,18 +11,21 @@ class Profile extends Component {
   };
 
   getProfile = async () => {
+    
     try {
-      const res = await service.profile(this.props.match.params.id);
-    //   let ofertaGet = await axios.get(
-    //     `${process.env.REACT_APP_API_URI}/profile/user/${this.props.match.params.id}`
-    //   );
-      let carData = await axios.get(
+      const res = await service.profile(this.userId);
+      
+      let userCar = await axios.get(
         `${process.env.REACT_APP_API_URI}/profile/car/${this.props.match.params.id}`
       );
-      this.setState({ user: res, car :carData.data });
+      
+      this.setState({ user: res, car :userCar.data });
+     
     } catch (error) {
       console.log(error);
+      
     }
+    
   };
 
   componentDidMount() {
@@ -30,13 +33,17 @@ class Profile extends Component {
   }
 
   render() {
+    
   return (
     <div className="profile-container">
       <div>
         <p><b>Bienvenido {this.props.user.username}
         </b></p>
       </div>
-      
+      <section>
+
+     
+           </section>
       <section className="profile-links">
         
    
@@ -45,6 +52,11 @@ class Profile extends Component {
           
           <button className="profile-button">Edit Profile</button>
         </Link>
+        <Link to={`/garage/${this.props.user._id}`}>
+          
+          <button className="profile-button">My Garage</button>
+        </Link>
+       
       </section>
     
     </div>

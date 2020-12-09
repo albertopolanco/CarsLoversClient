@@ -20,7 +20,7 @@ class Navbar extends Component {
             Logout
           </button>
           <button className="navbar-button">
-            <Link to={`profile/${this.props.user._id}`}>
+            <Link to={`/profile/${this.props.user._id}`}>
             Profile
             </Link>
             </button>

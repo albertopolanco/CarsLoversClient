@@ -32,6 +32,16 @@ class Auth {
     // return this.auth.get("/auth/me").then((response) => response.data);
   }
 
+  garage(id){
+    return this.auth.get(`/cars/garage/${id}`).then(({data}) => {
+      return data});
+  }
+
+  carDetail(id){
+    return this.auth.get(`/cars/carDetail/${id}`).then(({data}) => {
+      return data});
+  }
+
   profile(id){
     return this.auth.get(`/profile/${id}`).then(({data}) => {
       return data});

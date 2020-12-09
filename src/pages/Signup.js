@@ -12,7 +12,7 @@ class Signup extends Component {
     this.props.signup({ username, password });
   };
 
-  handleChange = event => {
+  handleChange = (event) => {
     const { name, value } = event.target;
     this.setState({ [name]: value });
   };
