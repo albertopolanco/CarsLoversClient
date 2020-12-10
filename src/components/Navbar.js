@@ -16,11 +16,11 @@ class Navbar extends Component {
         
         {isLoggedin ? (
           <div className="navbar-logged">
-          <button className="navbar-button" onClick={logout}>
+          <button className="navbar-button" onClick={this.props.logout}>
             Logout
           </button>
           <button className="navbar-button">
-            <Link to={`/profile/${this.props.user._id}`}>
+            <Link to={`/profile`}>
             Profile
             </Link>
             </button>

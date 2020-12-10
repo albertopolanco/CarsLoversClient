@@ -16,7 +16,7 @@ class Profile extends Component {
       const res = await service.profile(this.userId);
       
       let userCar = await axios.get(
-        `${process.env.REACT_APP_API_URI}/profile/car/${this.props.match.params.id}`
+        `${process.env.REACT_APP_API_URI}/profile/car/${this.props.user._id}`
       );
       
       this.setState({ user: res, car :userCar.data });

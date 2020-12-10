@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import service from "../lib/auth-service";
 import { withAuth } from "../lib/AuthProvider";
@@ -48,7 +49,7 @@ class Create extends Component {
       )
       .then(() => {})
       .catch((error) => console.log(error));
-    this.props.history.push(`/profile/${this.props.match.params.id}`);
+    this.props.history.push(`/garage/${this.props.match.params.id}`);
   };
   handleCreateCar = (event) => {
     const { name, value } = event.target;
@@ -134,6 +135,10 @@ class Create extends Component {
           <input type="file" onChange={(e) => this.handleFileUpload(e)} />
           <br />
           <input type="submit" value="Submit" />
+
+          <Link to={`/garage/${this.props.user._id}`}>
+            <button className="login-button">Go back</button>
+          </Link>
         </form>
       </div>
     );

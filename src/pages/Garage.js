@@ -13,7 +13,6 @@ class Garage extends Component {
   getGarage = async () => {
     try {
     let myCars = await service.garage(this.props.match.params.id)
-        console.log(myCars, "rrrrrrrrrrrrr")
         this.setState({  cars: myCars });
      } catch (error) {
       console.log(error);
@@ -39,8 +38,8 @@ class Garage extends Component {
                 ? this.state.cars.map((data, index) => {
               return (
                 
-                  <div className="profile-list-info">  
-                    <Link to="/carDetail/:id"><img src={data.image} alt="Car Image" className=""/></Link>
+                  <div key={index} className="">  
+                    <Link to={`/carDetail/${data._id}`}><img src={data.image} alt="Car Image" className=""/></Link>
                     <br/>
                     <p><b>Brand:   </b>{data.brand}</p>
                     <p><b>Model:   </b>{data.model}</p>
@@ -56,6 +55,10 @@ class Garage extends Component {
           
           <button className="profile-button">Add your car</button>
         </Link>
+        <Link to={`/profile`}>
+            <button className="login-button">Go back</button>
+          </Link>
+          
         </section>
       </div>
     );

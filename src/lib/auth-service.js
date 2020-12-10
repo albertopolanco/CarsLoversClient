@@ -42,6 +42,11 @@ class Auth {
       return data});
   }
 
+  deleteCar(id){
+    return this.auth.get(`/cars/garage/${id}`).then(({data}) => {
+      return data});
+  }
+
   profile(id){
     return this.auth.get(`/profile/${id}`).then(({data}) => {
       return data});

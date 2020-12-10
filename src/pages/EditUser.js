@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { withAuth } from "../lib/AuthProvider";
-// import service from "../lib/auth-service";
+import service from "../lib/auth-service";
 import axios from "axios";
 
 class EditUser extends Component {
@@ -18,7 +18,13 @@ class EditUser extends Component {
 
   handleFormSubmit = (event) => {
     event.preventDefault();
-    let { username, age, country, city, image } = this.state;
+    let { 
+      username, 
+      age, 
+      country, 
+      city, 
+      image 
+    } = this.state;
 
     axios
       .put(
@@ -32,7 +38,7 @@ class EditUser extends Component {
         }
       )
       .then(() => {
-        this.props.history.push(`/profile/${this.props.match.params.id}`);
+         this.props.history.push(`/profile`);
       })
       .catch((error) => console.log(error));
   };
@@ -42,6 +48,17 @@ class EditUser extends Component {
     this.setState({
       [name]: value,
     });
+  };
+
+  handleFileUpload = async (e) => {
+    const upload = new FormData();
+    upload.append("image", e.target.files[0]);
+    try {
+      const res = await service.handleUpLoad(upload);
+      this.setState({ image: res.secure_url });
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   render() {
@@ -92,6 +109,10 @@ class EditUser extends Component {
         <div className="submit">
           <input className="login-button" type="submit" value="Submit" />
         </div>
+
+        <Link to={`/profile`}>
+            <button className="login-button">Go back</button>
+          </Link>
       </form>
     </div>
   );
