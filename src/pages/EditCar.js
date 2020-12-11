@@ -62,6 +62,27 @@ class EditCar extends Component {
     });
   };
 
+  handleFormEdit = (event) => {
+
+    axios
+      .get(`${process.env.REACT_APP_API_URI}/cars/${this.props.match.params.id}`)
+      .then((edit) => {
+        this.setState({
+          brand: edit.data.brand,
+          model: edit.data.model,
+          year: edit.data.year,
+          engine: edit.data.engine,
+          power: edit.data.power,
+          traction: edit.data.traction,
+          fuel: edit.data.fuel,
+          image: edit.data.image,
+        })
+       
+    })
+    .catch((error) => console.log(error));
+
+}
+
   handleFileUpload = async (e) => {
     const upload = new FormData();
     upload.append("image", e.target.files[0]);
@@ -73,6 +94,9 @@ class EditCar extends Component {
     }
   };
 
+  componentDidMount() {
+    this.handleFormEdit();
+  }
   render() {
     //console.log(this.state.brand)
     return (

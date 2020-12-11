@@ -39,9 +39,33 @@ class EditUser extends Component {
       )
       .then(() => {
          this.props.history.push(`/profile`);
+         
       })
       .catch((error) => console.log(error));
   };
+
+ 
+handleFormEdit = (event) => {
+
+    axios
+      .get(`${process.env.REACT_APP_API_URI}/profile/${this.props.user._id}`)
+      .then((edit) => {
+        this.setState({
+          username: edit.data.username,
+          age: edit.data.age,
+          country: edit.data.country,
+          city: edit.data.city,
+          image: edit.data.image,
+        })
+       console.log(edit, "222222222222")
+       
+    })
+    .catch((error) => console.log(error));
+
+}
+  
+
+
 
   handleChangeUser = (event) => {
     let { name, value } = event.target;
@@ -60,6 +84,10 @@ class EditUser extends Component {
       console.log(error);
     }
   };
+
+  componentDidMount() {
+    this.handleFormEdit();
+  }
 
   render() {
   return (
