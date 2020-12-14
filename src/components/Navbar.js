@@ -8,12 +8,12 @@ class Navbar extends Component {
     return (
       <nav className='navbar'>
        
-      
+      <div>
     
-        <Link to={"/"} id='home-btn'>
-          <h4>Home</h4>
+        <Link to={"/"} className='home-btn'>
+          <img src="https://res.cloudinary.com/dtsag4ss2/image/upload/v1607963082/Fotos/kisspng-auto-show-car-logo-drawing-5affb4fbf28da1.0945702815267074519935_juiqfo.png" alt=""/>
         </Link>
-        
+        </div>
         {isLoggedin ? (
           <div className="navbar-logged">
           <button className="navbar-button" onClick={this.props.logout}>
@@ -30,7 +30,6 @@ class Navbar extends Component {
           <Link to="/login">
             <button className="navbar-button">Login</button>
           </Link>
-          <br />
           <Link to="/signup">
             <button className="navbar-button">SignUp</button>
           </Link>

@@ -28,10 +28,13 @@ class Garage extends Component {
     
     return (
         
-      <div>
-          
+      <div className="garageBackground">
+        <section>
+          <div className="titleGarage">
         <h1>My Garage</h1>
-        <body>
+        </div>
+        </section>
+        <section>
           
         
        
@@ -66,7 +69,7 @@ class Garage extends Component {
           </Link>
           
         
-        </body>
+          </section>
       </div>
       
     );

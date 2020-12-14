@@ -56,8 +56,13 @@ class CarDetail extends Component {
   render() {
     console.log(this.state.car, "ooooooooooooo");
     return (
-      <div className="">
+      <div className="detailsBackground">
+        <section>
+        <div className="titleCardDetails">
         <h1>Car Details</h1>
+        </div>
+        </section>
+        <section>
         <div className="">
          
             <img src={this.state.car && this.state.car.image} alt="Car Image"></img>
@@ -107,7 +112,10 @@ class CarDetail extends Component {
               </Link>
             </>
           ) : null}
+          
         </div>
+        </section>
+
       </div>
     );
   }

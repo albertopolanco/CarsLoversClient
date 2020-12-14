@@ -35,28 +35,29 @@ class Profile extends Component {
   render() {
     
   return (
-    <div className="">
-      <div>
-        <p><b>Bienvenido {this.props.user.username}
-        </b></p>
-      </div>
+    <div className="profileBackground">
       <section>
+      <div className="titleProfile">
+        <h1>Welcome {this.props.user.username}
+        </h1>
+      </div>
+      
 
      
            </section>
-      <section className="">
+      <section>
         
-   
+    <div className="botones">
 
         <Link to={`/editUser/${this.props.user._id}`}>
           
-          <button className="">Edit Profile</button>
+          <button className="profileButton">Edit Profile</button>
         </Link>
         <Link to={`/garage/${this.props.user._id}`}>
           
-          <button className="">My Garage</button>
+          <button className="profileButton">My Garage</button>
         </Link>
-       
+        </div>
       </section>
     
     </div>
