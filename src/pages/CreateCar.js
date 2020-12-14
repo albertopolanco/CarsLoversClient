@@ -62,14 +62,15 @@ class Create extends Component {
     const upload = new FormData();
     upload.append("image", e.target.files[0]);
     try {
-      const res = await service.handleUpLoad(upload);
+      const res = await service.handleUpload(upload);
+      // console.log(res, "yyyyyyyyyyy")
       this.setState({ image: res.secure_url });
     } catch (error) {
       console.log(error);
     }
   };
   render() {
-    console.log(this.props.history.location.pathname.push);
+    // console.log(this.props.history.location.pathname.push);
     return (
       <div>
         <h3>Create your car</h3>
@@ -132,7 +133,10 @@ class Create extends Component {
           <br />
           <br />
           <label>Image: </label>
-          <input type="file" onChange={(e) => this.handleFileUpload(e)} />
+          <input 
+          type="file" 
+          name="image"
+          onChange={(e) => this.handleFileUpload(e)} />
           <br />
           <input type="submit" value="Submit" />
 

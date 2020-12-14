@@ -83,11 +83,11 @@ class EditCar extends Component {
 
 }
 
-  handleFileUpload = async (e) => {
+    handleFileUpload = async (e) => {
     const upload = new FormData();
     upload.append("image", e.target.files[0]);
     try {
-      const res = await service.handleUpLoad(upload);
+      const res = await service.handleUpload(upload);
       this.setState({ image: res.secure_url });
     } catch (error) {
       console.log(error);

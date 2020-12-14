@@ -63,7 +63,7 @@ class Auth {
   }
 
   handleUpload = async (theFile)=>{
-    console.log("file in service", theFile);
+    // console.log("file in service", theFile);
     try {
       const res= await this.auth.post("/upload", theFile);
       return res.data;

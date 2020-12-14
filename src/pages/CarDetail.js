@@ -59,9 +59,9 @@ class CarDetail extends Component {
       <div className="">
         <h1>Car Details</h1>
         <div className="">
-          <div className="">
+         
             <img src={this.state.car && this.state.car.image} alt="Car Image"></img>
-          </div>
+          
 
           <p>
             <b>Brand: </b>
