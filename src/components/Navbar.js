@@ -11,7 +11,7 @@ class Navbar extends Component {
       <div>
     
         <Link to={"/"} className='home-btn'>
-          <img src="https://res.cloudinary.com/dtsag4ss2/image/upload/v1607963082/Fotos/kisspng-auto-show-car-logo-drawing-5affb4fbf28da1.0945702815267074519935_juiqfo.png" alt=""/>
+          <img src="https://res.cloudinary.com/dtsag4ss2/image/upload/v1607963082/Fotos/kisspng-auto-show-car-logo-drawing-5affb4fbf28da1.0945702815267074519935_juiqfo.png" alt="Logo"/>
         </Link>
         </div>
         {isLoggedin ? (
@@ -37,22 +37,6 @@ class Navbar extends Component {
       )}
     
     </nav>
-      //     <>
-           
-      //       <button className='navbar-button' onClick={logout}>Logout</button>
-      //     </>
-      //   ) : (
-      //     <>
-      //       <Link to='/login'>
-      //         <button className='navbar-button'>Login</button>
-      //       </Link>
-      //       <br />
-      //       <Link to='/signup'>
-      //         <button className='navbar-button'>Sign Up</button>
-      //       </Link>
-      //     </>
-      //   )}
-      // </nav>
     );
   }
 }

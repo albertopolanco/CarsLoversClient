@@ -72,8 +72,8 @@ class Create extends Component {
   render() {
     // console.log(this.props.history.location.pathname.push);
     return (
-      <div>
-        <h3>Create your car</h3>
+      <div className="createCarBackground">
+        <h1 className="titleCreate">Create your car</h1>
         <form className="edit-info" onSubmit={this.handleFormSubmit}>
           <label>Brand: </label>
           <input

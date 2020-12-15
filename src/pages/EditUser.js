@@ -91,6 +91,7 @@ handleFormEdit = (event) => {
 
   render() {
   return (
+    <div className="editProfileBackground">
     <div className="edit">
       <hr />
       <h1>Edit User</h1>
@@ -142,6 +143,7 @@ handleFormEdit = (event) => {
             <button className="login-button">Go back</button>
           </Link>
       </form>
+    </div>
     </div>
   );
 }

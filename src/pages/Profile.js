@@ -41,7 +41,9 @@ class Profile extends Component {
         <h1>Welcome {this.props.user.username}
         </h1>
       </div>
-      
+      {/* <div>
+      <img src={this.props.user.image} alt="foto" className="profile-image"/>
+      </div> */}
 
      
            </section>
