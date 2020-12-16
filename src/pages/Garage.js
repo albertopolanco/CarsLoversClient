@@ -71,7 +71,8 @@ class Garage extends Component {
                   );
                 })
               : null}
-
+              
+              <section>
             <div className="botones">
               <Link to={`/createcar/${this.props.user._id}`}>
                 <button className="garageButton">Add your car</button>
@@ -80,6 +81,7 @@ class Garage extends Component {
                 <button className="garageButton">Go back</button>
               </Link>
             </div>
+            </section>
           </section>
         </section>
       </div>

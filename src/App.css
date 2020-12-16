@@ -49,11 +49,97 @@ button.navbar-button a {
   height: 90.3vh;
 }
 
-
-.parking h1 {
+.parking h1  {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  padding: 30px;
+  color: rgb(195, 194, 194);
+}
+.parking h2  {
+  display: flex;
+  justify-content: center;
+  font-size: 15px;
+  margin-top: 30px;
   color: rgb(195, 194, 194);
 }
 
+/*--------------Login  &  Signup---------------*/
+.login {
+  background-image: url(https://res.cloudinary.com/dtsag4ss2/image/upload/v1607961079/Fotos/wp4429934_pepgvu.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 90.3vh;
+  overflow: hidden;
+}
+
+.cuenta {
+  color: #f2f2f2;
+
+}
+.cuenta p{
+  text-decoration: none;
+  padding: 10px;
+}
+
+.login h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+  color: rgb(195, 194, 194);
+}
+
+.login-button {
+  margin: 10px;
+  padding: 5px;
+  border: 10px;
+  width: 100px;
+  border-radius: 3rem;
+  border: 1px solid black;
+  background-color: rgb(233, 233, 233);
+}
+.login-form h3 {
+  text-align: center;
+  color: black;
+}
+.login-form {
+  box-sizing: border-box;
+  padding-top: 15px;
+  padding-bottom: 10%;
+  margin: 5% auto;
+  text-align: center;
+}
+.login input[type="text"],
+.login input[type="password"] {
+  max-width: 400px;
+  width: 80%;
+  line-height: 3em;
+  font-family: "Ubuntu", sans-serif;
+  margin: 1em 2em;
+  border-radius: 3rem;
+  border: 2px solid #f2f2f2;
+  outline: none;
+  padding-left: 10px;
+}
+.login-form input[type="button"] {
+  height: 30px;
+  width: 100px;
+  background: #fff;
+  border: 1px solid #f2f2f2;
+  border-radius: 20px;
+  color: slategrey;
+  text-transform: uppercase;
+  font-family: "Ubuntu", sans-serif;
+  cursor: pointer;
+}
+
+.sign-up {
+  color: #f2f2f2;
+  margin: 10px 0;
+  cursor: pointer;
+  text-decoration: underline;
+}
 
 
  /*---------------------profile-----------------*/
@@ -104,7 +190,7 @@ button.navbar-button a {
   background-position: center;
   background-size: cover;
   width: 100vw;
-  height: 90.4vh;
+  height: 93.4vh;
  }
 
 
@@ -114,7 +200,6 @@ button.navbar-button a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* margin: 10px; */
   line-height: 40px;
   flex-wrap: nowrap;
 }
@@ -275,6 +360,7 @@ button.navbar-button a {
   max-width: 400px;
   width: 80%;
   line-height: 25px;
+  border-radius: 3rem;
   border: 2px solid #51616e;
   padding-left: 10px; 
 }
@@ -312,6 +398,100 @@ button.navbar-button a {
 
  /*---------------------profile-----------------*/
  @media (min-width: 750px) {
+
+  /*------------Home----------------*/
+
+.parking {
+  background-image: url(https://res.cloudinary.com/dtsag4ss2/image/upload/v1608032953/Fotos/nikhil-thakar-s2_dalocm.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 93.1vh;
+}
+
+
+.parking h1  {
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+  padding: 30px;
+  color: rgb(195, 194, 194);
+}
+.parking h2  {
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  margin-top: 30px;
+  color: rgb(195, 194, 194);
+}
+
+/*---------------Login  &  Signup------------------*/
+
+.login {
+  background-image: url(https://res.cloudinary.com/dtsag4ss2/image/upload/v1607961079/Fotos/wp4429934_pepgvu.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 93.1vh;
+  overflow: hidden;
+}
+
+.login-header {
+  color: rgb(195, 194, 194);
+  text-align: center;
+  font-size: 150%;
+ 
+}
+
+.login-button {
+  margin: 10px;
+  padding: 5px;
+  border: 10px;
+  width: 100px;
+  border-radius: 3rem;
+  border: 1px solid black;
+  background-color: rgb(233, 233, 233);
+}
+.login-form h3 {
+  text-align: center;
+  color: rgb(195, 194, 194);
+}
+.login-form {
+  box-sizing: border-box;
+  padding-top: 15px;
+  padding-bottom: 10%;
+  margin: 5% auto;
+  text-align: center;
+}
+.login input[type="text"],
+.login input[type="password"] {
+  max-width: 400px;
+  width: 80%;
+  font-family: "Ubuntu", sans-serif;
+  margin: 1em 2em;
+  border-radius: 3rem;
+  border: 2px solid #f2f2f2;
+  outline: none;
+  padding-left: 10px;
+}
+.login-form input[type="button"] {
+  height: 30px;
+  width: 100px;
+  background: #fff;
+  border: 1px solid #f2f2f2;
+  border-radius: 20px;
+  color: slategrey;
+  text-transform: uppercase;
+  font-family: "Ubuntu", sans-serif;
+  cursor: pointer;
+}
+
+
+
+
+  /*---------------------profile-----------------*/
+
  .profileBackground{
   background-image: url(https://res.cloudinary.com/dtsag4ss2/image/upload/v1608032688/Fotos/boJykZ_omnn2o.jpg);
   background-repeat: no-repeat;
@@ -330,26 +510,14 @@ button.navbar-button a {
   color: white;
  }
 
- .botones {
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-   margin-top: 200px;
-   gap: 150px;
- }
-
+ 
  .profileButton {
   width: 100px;
   padding: 10px;
   border-radius: 10px;
-  
+  margin-top: 100px;
  }
- .profileButton a {
-   display: inline;
-   text-decoration: none;
-   margin-top: 80px;
- }
-
+ 
 
  /*-----------------Edit Profile--------------*/
 
@@ -362,72 +530,21 @@ button.navbar-button a {
   height: 93.1vh;
  }
 
-
-
- .edit {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  line-height: 40px;
-  flex-wrap: nowrap;
-}
-
-.edit-info {
-  font-size: 20px;
-  /* margin-top: 30px; */
-  line-height: 35px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-
 .edit h1 {
   color: rgb(195, 194, 194);
   font-size: 40px;
   margin-top: 10px;
 }
 
-.edit-info label {
-  color: rgb(195, 194, 194);
-  font-weight: bold;
-}
-.edit-info input[type="text"] {
-  max-width: 400px;
-  width: 80%;
-  line-height: 25px;
-  border: 2px solid #4682b4;
-  padding-left: 10px;
-}
-
-.edit-info textarea[type="text"] {
-  max-width: 400px;
-  width: 80%;
-  line-height: 25px;
-  border: 2px solid #4682b4;
-  padding-left: 10px;
-}
-
-.profile-image {
-  width: 40%;
-  height: 40%;
-  margin: 10px;
-  border-radius: 5%;
-}
-
-
 /*-----------------Garage--------------*/
 
- 
 .garageBackground{
-  /* background-image: url(https://res.cloudinary.com/dtsag4ss2/image/upload/v1607960403/Fotos/KQCdZU_ohk3iv.jpg); */
   background-color: #686d76;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
  }
 
  .titleGarage {
@@ -438,31 +555,6 @@ button.navbar-button a {
   color: white;
  }
 
- .garage {
-  display: flex;
-  flex-direction: row; 
-  flex-wrap: wrap; 
-  align-items: center; 
-  justify-content: space-around; 
-  margin-top: 40px;
- }
-
- .cardGarage {
-  display: flex;
-  flex-direction: column;
-  border-radius: 25%;
- }
-
- .cardGarage img {
-   width: 300px;
-   border-radius: 10%;
- }
- 
- .cardGarage h4 {
-   text-align: center;
-   margin-bottom: 10px;;
- }
-
  .botones {
   display: flex;
   flex-direction: row;
@@ -471,17 +563,6 @@ button.navbar-button a {
   margin-bottom: 40px;
   gap: 100px;
 }
-
- .garageButton {
-  width: 120px;
-  padding: 10px;
-  border-radius: 10px;
- }
- .garageButton a {
-   display: inline;
-   align-items: center;
-   text-decoration: none;
- } 
 
  /*---------------------CreateCar------------------*/
 
@@ -502,54 +583,168 @@ button.navbar-button a {
   color: white;
  }
 
- .edit {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  line-height: 40px;
-  flex-wrap: nowrap;
+}
+/*-----------Fin Tablet--------------*/
+
+/*----------------Laptop--------------------------*/
+@media (min-width: 1020px) {
+
+
+
+  /*------------Home----------------*/
+
+.parking {
+  background-image: url(https://res.cloudinary.com/dtsag4ss2/image/upload/v1608032953/Fotos/nikhil-thakar-s2_dalocm.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 92.9vh;
 }
 
-.edit-info {
-  font-size: 20px;
-  margin-top: 30px;
-  line-height: 35px;
+
+.parking h1  {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
+  justify-content: center;
+  font-size: 70px;
+  padding: 30px;
+  color: rgb(195, 194, 194);
 }
+.parking h2  {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  margin-top: 30px;
+  color: rgb(195, 194, 194);
+}
+
+
+/*---------------Login & Signup------------------*/
+
+.login {
+  background-image: url(https://res.cloudinary.com/dtsag4ss2/image/upload/v1607961079/Fotos/wp4429934_pepgvu.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 92.9vh;
+  overflow: hidden;
+}
+
+.login-header {
+  color: rgb(195, 194, 194);
+  text-align: center;
+}
+
+   /*---------------------profile-----------------*/
+
+ .profileBackground{
+  background-image: url(https://res.cloudinary.com/dtsag4ss2/image/upload/v1608032688/Fotos/boJykZ_omnn2o.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 92.9vh;
+ }
+
+ .titleProfile {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 40px;
+  padding: 30px;;
+  color: white;
+ }
+
+ 
+ .profileButton {
+  width: 100px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 100px;
+ }
+
+
+
+ /*-----------------Edit Profile--------------*/
+
+ .editProfileBackground{
+  background-image: url(https://res.cloudinary.com/dtsag4ss2/image/upload/v1607961079/Fotos/wp4429934_pepgvu.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 93.1vh;
+ }
 
 .edit h1 {
   color: rgb(195, 194, 194);
+  font-size: 50px;
+  margin: 20px;
 }
 
-.edit-info label {
-  color: rgb(195, 194, 194);
-  font-weight: bold;
-}
-.edit-info input[type="text"] {
-  max-width: 400px;
-  width: 80%;
-  line-height: 25px;
-  border: 2px solid #51616e;
-  padding-left: 10px; 
-}
 
-.edit-info textarea[type="text"] {
-  max-width: 400px;
-  width: 80%;
-  line-height: 25px;
-  border: 2px solid #51616e;
-  padding-left: 10px;
-}
+/*-----------------Garage--------------*/
 
-.profile-image {
-  width: 40%;
-  height: 40%;
-  margin: 10px;
-  border-radius: 5%;
-}
+.garageBackground{
+  background-color: #686d76;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+ }
+
+ .titleGarage {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 40px;
+  color: white;
+ }
+
+ .garage {
+  display: flex;
+  flex-direction: row; 
+  flex-wrap: wrap; 
+  align-items: center; 
+  justify-content: space-around; 
+  margin-top: 40px;
+  gap: 30px;
+ }
+
+ .cardGarage {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; 
+  border-radius: 25%;
+ }
+
+ .cardGarage img {
+   width: 400px;
+   border-radius: 10%;
+ }
+ 
+ 
+ /*---------------------CreateCar------------------*/
+
+ .createCarBackground{
+  background-image: url(https://res.cloudinary.com/dtsag4ss2/image/upload/v1608047295/Fotos/470521-Everybody039s_Gone_to_the_Rapture-in-game-CryEngine-Garage-workshop_n9us6f.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  height: 92.9vh;
+ }
+
+ .titleCreate {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 50px;
+  color: white;
+ }
+
+ 
+  
 
 }
