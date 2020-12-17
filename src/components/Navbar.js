@@ -20,7 +20,7 @@ class Navbar extends Component {
             Logout
           </button>
           <button className="navbar-button">
-            <Link to={`/profile`}>
+            <Link to={`/profile`}> 
             Profile
             </Link>
             </button>

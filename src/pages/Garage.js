@@ -32,28 +32,7 @@ class Garage extends Component {
           </div>
         </section>
         <section>
-          {/* <div className="card">
-            {this.state.cars
-                ? this.state.cars.map((data, index) => {
-              return (
-                <div className="cards-list">
-                  <div className="card 1">
-                  <div key={index} >  
-                    <Link to={`/carDetail/${data._id}`}><img src={data.image} alt="Car Image" className="card_image"/></Link>
-                    <br/>
-                    </div>
-                    <div className="details">
-                    <h2 className="card_title title-white">Brand:<span>{data.brand} </span></h2>
-                    <h2><b>Model:   </b>{data.model}</h2> 
-                 </div>
-                 </div>
-                 </div>
-              );
-            })
-          : null}
           
-          </div>  
-        */}
           <section className="garage">
             {this.state.cars
               ? this.state.cars.map((data, index) => {
@@ -63,16 +42,16 @@ class Garage extends Component {
                         <Link to={`/carDetail/${data._id}`}>
                           <img src={data.image} alt="Car Image" />
                         </Link>
-                        <h4>Brand: {data.brand}</h4>
+                        <h4> {data.brand}</h4>
                         <br />
-                        <h4>Model: {data.model}</h4>
+                        <h4> {data.model}</h4>
                       </article>
                     </>
                   );
                 })
               : null}
-              
-              <section>
+              </section>
+              {/* <section> */}
             <div className="botones">
               <Link to={`/createcar/${this.props.user._id}`}>
                 <button className="garageButton">Add your car</button>
@@ -81,9 +60,9 @@ class Garage extends Component {
                 <button className="garageButton">Go back</button>
               </Link>
             </div>
-            </section>
+            {/* </section> */}
           </section>
-        </section>
+        
       </div>
     );
   }

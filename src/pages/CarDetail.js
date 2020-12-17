@@ -9,31 +9,15 @@ class CarDetail extends Component {
     super(props);
     this.state = {};
   }
-  // constructor(props) {
-  //     super(props);
-  //     this.state = {};
-  //   }
 
   getSingleCarDetail = async () => {
     try {
-     
       let carDetails = await service.carDetail(this.props.match.params.id);
       this.setState({ car: carDetails });
     } catch (error) {
       console.log(error);
     }
-  
   };
-
-  // deleteCar = async () => {
-  //   try {
-  //     await service.carDetail(this.props.match.params.id);
-  //     this.props.history.push(`/garage/${this.props.user._id}`);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // }
-
 
   deleteCar = () => {
     const { params } = this.props.match;
@@ -47,78 +31,74 @@ class CarDetail extends Component {
       });
   };
 
-
-
   componentDidMount() {
     this.getSingleCarDetail();
   }
 
   render() {
-    console.log(this.state.car, "ooooooooooooo");
     return (
-      <div className="detailsBackground">
-        <section>
-        <div className="titleCardDetails">
-        <h1>Car Details</h1>
-        </div>
-        </section>
-        <section>
-        <div className="">
-         
-            <img src={this.state.car && this.state.car.image} alt="Car Image"></img>
-          
+      <div>
+        <section className="carDetails">
+          <div className="titleCardDetails">
+            <h1>Car Details</h1>
+          </div>
 
-          <p>
-            <b>Brand: </b>
-            {this.state.car && this.state.car.brand}
-          </p>
-          <p>
-            <b>Model: </b>
-            {this.state.car && this.state.car.model}
-          </p>
-          <p>
-            <b>Year: </b>
-            {this.state.car && this.state.car.year}
-          </p>
-          <p>
-            <b>Engine: </b>
-            {this.state.car && this.state.car.engine}
-          </p>
-          <p>
-            <b>Power: </b>
-            {this.state.car && this.state.car.power}
-          </p>
-          <p>
-            <b>Traction: </b>
-            {this.state.car && this.state.car.traction}
-          </p>
-          <p>
-            <b>Fuel: </b>
-            {this.state.car && this.state.car.fuel}
-          </p>
-        </div>
-        <div className="">
-          <Link to={`/garage/${this.props.user._id}`}>
-            <button className="">Go back</button>
-          </Link>
-          
-          {this.props.user.id === this.state._id ? (
-            <>
-              <button className="" onClick={() => this.deleteCar()}>
-                Delete Car
-              </button>
-              <Link to={`/editcar/${this.props.match.params.id}`}>
-                <button className="">Edit car</button>
-              </Link>
-            </>
-          ) : null}
-          
-        </div>
-        </section>
+          <div className="cardDetail img"> 
+            <img 
+              src={this.state.car && this.state.car.image}
+              alt="Car Image"
+            ></img>
+          </div>
+          <div className="carDetailText">
+            <p>
+              <b>Brand: </b>
+              {this.state.car && this.state.car.brand}
+            </p>
+            <p>
+              <b>Model: </b>
+              {this.state.car && this.state.car.model}
+            </p>
+            <p>
+              <b>Year: </b>
+              {this.state.car && this.state.car.year}
+            </p>
+            <p>
+              <b>Engine: </b>
+              {this.state.car && this.state.car.engine}
+            </p>
+            <p>
+              <b>Power: </b>
+              {this.state.car && this.state.car.power}
+            </p>
+            <p>
+              <b>Traction: </b>
+              {this.state.car && this.state.car.traction}
+            </p>
+            <p>
+              <b>Fuel: </b>
+              {this.state.car && this.state.car.fuel}
+            </p>
+          </div>
+          <div className="botones">
+            <Link to={`/garage/${this.props.user._id}`}>
+              <button className="carDetailButton">Go back</button>
+            </Link>
 
+            {this.props.user.id === this.state._id ? (
+              <>
+                <button className="carDetailButton" onClick={() => this.deleteCar()}>
+                  Delete Car
+                </button>
+                <Link to={`/editcar/${this.props.match.params.id}`}>
+                  <button className="carDetailButton">Edit car</button>
+                </Link>
+              </>
+            ) : null}
+          </div>
+        </section>
       </div>
     );
   }
-};
+}
 
 export default withAuth(CarDetail);

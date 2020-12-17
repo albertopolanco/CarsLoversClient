@@ -138,7 +138,6 @@ button.navbar-button a {
   color: #f2f2f2;
   margin: 10px 0;
   cursor: pointer;
-  text-decoration: underline;
 }
 
 
@@ -150,7 +149,7 @@ button.navbar-button a {
   background-position: center;
   background-size: cover;
   width: 100vw;
-  height: 90.3vh;
+  height: 99.2vh;
  }
 
  .titleProfile {
@@ -166,13 +165,19 @@ button.navbar-button a {
    flex-direction: row;
    justify-content: center;
    margin-top: 180px;
-   gap: 100px;
+   margin: 100px;
  }
 
  .profileButton {
   width: 100px;
+  background-color: rgb(103, 103, 126);
+  color: black;
   padding: 10px;
   border-radius: 10px;
+  margin: 70px;
+  -webkit-box-shadow: 7px 7px 5px -1px rgba(219,212,219,1);
+-moz-box-shadow: 7px 7px 5px -1px rgba(219,212,219,1);
+box-shadow: 7px 7px 5px -1px rgba(219,212,219,1);
  }
  .profileButton a {
    display: inline;
@@ -248,8 +253,6 @@ button.navbar-button a {
 
  
 .garageBackground{
-  /* background-image: url(https://res.cloudinary.com/dtsag4ss2/image/upload/v1607960403/Fotos/KQCdZU_ohk3iv.jpg); */
-  background-color: #686d76;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -265,6 +268,10 @@ button.navbar-button a {
   color: white;
  }
 
+ .titleGarage h1 {
+  color: black
+}
+
  .garage {
   display: flex;
   flex-direction: row; 
@@ -274,15 +281,22 @@ button.navbar-button a {
   margin-top: 40px;
  }
 
+ 
+
  .cardGarage {
+  background-color: rgb(195, 194, 194);
   display: flex;
   flex-direction: column;
-  border-radius: 25%;
+  border-radius: 10%;
+  -webkit-box-shadow: 20px 20px 20px 5px rgba(0,0,0,1);
+  -moz-box-shadow: 20px 20px 20px 5px rgba(0,0,0,1);
+  box-shadow: 20px 20px 20px 5px rgba(0,0,0,1);
+  margin: 20px;
  }
 
  .cardGarage img {
    width: 300px;
-   border-radius: 10%;
+   border-radius: 10% 10% 0 0;
  }
  
  .cardGarage h4 {
@@ -296,13 +310,17 @@ button.navbar-button a {
   justify-content: center;
   margin-top: 80px;
   margin-bottom: 40px;
-  gap: 100px;
+  
 }
 
  .garageButton {
   width: 120px;
   padding: 10px;
   border-radius: 10px;
+  margin: 0 40px 0 40px;
+  -webkit-box-shadow: 7px 7px 15px 2px rgba(0,0,0,0.75);
+  -moz-box-shadow: 7px 7px 15px 2px rgba(0,0,0,0.75);
+  box-shadow: 7px 7px 15px 2px rgba(0,0,0,0.75);
  }
  .garageButton a {
    display: inline;
@@ -317,8 +335,9 @@ button.navbar-button a {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  padding: 10px;
   width: 100vw;
-  height: 100%;
+  height: 90.4vh;
  }
 
  .titleCreate {
@@ -345,7 +364,7 @@ button.navbar-button a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  margin: 10px;
 }
 
 .edit h1 {
@@ -382,8 +401,38 @@ button.navbar-button a {
 
  /*-----------------Car Details---------------*/
 
- 
+ .cardDetails {
+  display: flex;
+  flex-direction: column;
+ }
 
+ .cardDetail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+ }
+
+ .cardDetail img {
+  width: 60%;
+  border-radius: 15%;
+  -webkit-box-shadow: 20px 20px 20px 5px rgba(0,0,0,1);
+  -moz-box-shadow: 20px 20px 20px 5px rgba(0,0,0,1);
+  box-shadow: 20px 20px 20px 5px rgba(0,0,0,1);
+  margin: 20px;
+ }
+
+ .carDetailText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-top: 80px;
+ }
+
+.divCaracteristicas p{
+  font-size: 20px;
+}
 
  .titleCardDetails {
   display: flex;
@@ -393,10 +442,22 @@ button.navbar-button a {
   color: white;
  }
 
+ .botones {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 80px;
+  
+}
+
+.carDetailButton {
+  width: 100px;
+  margin: 0 5px 0 5px;
+}
+
 /*----------------------------------IPAD--------------------------------------------------*/
 
 
- /*---------------------profile-----------------*/
  @media (min-width: 750px) {
 
   /*------------Home----------------*/
@@ -498,7 +559,7 @@ button.navbar-button a {
   background-position: center;
   background-size: cover;
   width: 100vw;
-  height: 93.1vh;
+  height: 100vh;
  }
 
  .titleProfile {
@@ -538,14 +599,6 @@ button.navbar-button a {
 
 /*-----------------Garage--------------*/
 
-.garageBackground{
-  background-color: #686d76;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 100vw;
-  height: 100%;
- }
 
  .titleGarage {
   display: flex;
@@ -561,7 +614,6 @@ button.navbar-button a {
   justify-content: center;
   margin-top: 80px;
   margin-bottom: 40px;
-  gap: 100px;
 }
 
  /*---------------------CreateCar------------------*/
@@ -583,13 +635,52 @@ button.navbar-button a {
   color: white;
  }
 
+ /*-----------------Car Details---------------*/
+
+ .cardDetail {
+  display: flex;
+  justify-content: center;
+  border-radius: 25%;
+  
+ }
+
+ .cardDetail img {
+  width: 70%;
+  border-radius: 15%;
+  -webkit-box-shadow: 20px 20px 20px 5px rgba(0,0,0,1);
+  -moz-box-shadow: 20px 20px 20px 5px rgba(0,0,0,1);
+  box-shadow: 20px 20px 20px 5px rgba(0,0,0,1);
+  margin: 20px;
+ }
+
+ .cardDetailText  {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 30px;
+  margin-top: 30px;
+ }
+ .titleCardDetails {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 30px;
+  color: white;
+ }
+
+ .botones {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
+
 }
 /*-----------Fin Tablet--------------*/
 
 /*----------------Laptop--------------------------*/
 @media (min-width: 1020px) {
-
-
 
   /*------------Home----------------*/
 
@@ -642,8 +733,8 @@ button.navbar-button a {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  width: 100%;
-  height: 92.9vh;
+  width: 100vw;
+  height: 92.5vh;
  }
 
  .titleProfile {
@@ -686,13 +777,13 @@ button.navbar-button a {
 /*-----------------Garage--------------*/
 
 .garageBackground{
-  background-color: #686d76;
+  
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  width: 100%;
-  height: 100%;
- }
+  width: 100vw;
+  height: 100vh;
+ } 
 
  .titleGarage {
   display: flex;
@@ -709,19 +800,22 @@ button.navbar-button a {
   align-items: center; 
   justify-content: space-around; 
   margin-top: 40px;
-  gap: 30px;
  }
 
  .cardGarage {
+  background-color: rgb(195, 194, 194);
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap; 
-  border-radius: 25%;
+  border-radius: 10%;
+  -webkit-box-shadow: 20px 20px 20px 5px rgba(0,0,0,1);
+  -moz-box-shadow: 20px 20px 20px 5px rgba(0,0,0,1);
+  box-shadow: 20px 20px 20px 5px rgba(0,0,0,1);
+  margin: 20px;
  }
 
  .cardGarage img {
-   width: 400px;
-   border-radius: 10%;
+   width: 300px;
+   border-radius: 10% 10% 0 0;
  }
  
  
@@ -743,8 +837,19 @@ button.navbar-button a {
   font-size: 50px;
   color: white;
  }
+/* 
+ .cardDetail img {
+   display: flex;
+   width: 40%;
+   justify-content: flex-start;
+   align-items: flex-start;
+ }
 
- 
-  
+ .cardDetailText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+   */
 
 }
