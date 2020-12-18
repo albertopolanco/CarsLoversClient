@@ -11,21 +11,17 @@ class Profile extends Component {
   };
 
   getProfile = async () => {
-    
     try {
       const res = await service.profile(this.userId);
-      
+
       let userCar = await axios.get(
         `${process.env.REACT_APP_API_URI}/profile/car/${this.props.user._id}`
       );
-      
-      this.setState({ user: res, car :userCar.data });
-     
+
+      this.setState({ user: res, car: userCar.data });
     } catch (error) {
       console.log(error);
-      
     }
-    
   };
 
   componentDidMount() {
@@ -33,36 +29,24 @@ class Profile extends Component {
   }
 
   render() {
-    
-  return (
-    <div className="profileBackground">
-      <section>
-      
-        <h1 className="titleProfile">Welcome {this.props.user.username}
-        </h1>
-      
-      {/* <div>
-      <img src={this.props.user.image} alt="foto" className="profile-image"/>
-      </div> */}
-        
-    <div className="botonesProfile">
+    return (
+      <div className="profileBackground">
+        <section>
+          <h1 className="titleProfile">Welcome {this.props.user.username}</h1>
 
-        
-          
-          <button className="profileButton"><Link to={`/editUser/${this.props.user._id}`}>Edit Profile</Link></button>
-        
-        
-          
-          <button className="profileButton"><Link to={`/garage/${this.props.user._id}`}>My Garage</Link></button>
-        
-        </div>
-      </section>
-    
-    </div>
-  );
-}
+          <div className="botonesProfile">
+            <button className="profileButton">
+              <Link to={`/editUser/${this.props.user._id}`}>Edit Profile</Link>
+            </button>
 
+            <button className="profileButton">
+              <Link to={`/garage/${this.props.user._id}`}>My Garage</Link>
+            </button>
+          </div>
+        </section>
+      </div>
+    );
+  }
 }
 
 export default withAuth(Profile);
-
