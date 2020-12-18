@@ -37,28 +37,24 @@ class Profile extends Component {
   return (
     <div className="profileBackground">
       <section>
-      <div className="titleProfile">
-        <h1>Welcome {this.props.user.username}
+      
+        <h1 className="titleProfile">Welcome {this.props.user.username}
         </h1>
-      </div>
+      
       {/* <div>
       <img src={this.props.user.image} alt="foto" className="profile-image"/>
       </div> */}
-
-     
-           </section>
-      <section>
         
-    <div className="botones">
+    <div className="botonesProfile">
 
-        <Link to={`/editUser/${this.props.user._id}`}>
+        
           
-          <button className="profileButton">Edit Profile</button>
-        </Link>
-        <Link to={`/garage/${this.props.user._id}`}>
+          <button className="profileButton"><Link to={`/editUser/${this.props.user._id}`}>Edit Profile</Link></button>
+        
+        
           
-          <button className="profileButton">My Garage</button>
-        </Link>
+          <button className="profileButton"><Link to={`/garage/${this.props.user._id}`}>My Garage</Link></button>
+        
         </div>
       </section>
     
