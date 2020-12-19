@@ -98,10 +98,12 @@ class EditCar extends Component {
     this.handleFormEdit();
   }
   render() {
-    //console.log(this.state.brand)
+    
     return (
-      <div>
-        <h3>Edit your car</h3>
+      <div className="editCarBackground">
+        <div className="edit">
+          <hr />
+        <h1>Edit your car</h1>
         <form className="edit-info" onSubmit={this.handleFormSubmit}>
           <label>Brand: </label>
           <input
@@ -172,6 +174,7 @@ class EditCar extends Component {
             <button className="login-button">Go back</button>
           </Link>
         </form>
+        </div>
       </div>
     );
   }

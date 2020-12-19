@@ -139,9 +139,9 @@ handleFormEdit = (event) => {
           <input className="login-button" type="submit" value="Submit" />
         </div>
 
-        <Link to={`/profile`}>
-            <button className="login-button">Go back</button>
-          </Link>
+        
+            <button className="login-button"><Link to={`/profile`}>Go back</Link></button>
+          
       </form>
     </div>
     </div>

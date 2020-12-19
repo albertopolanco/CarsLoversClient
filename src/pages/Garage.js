@@ -26,10 +26,10 @@ class Garage extends Component {
   render() {
     return (
       <div className="garageBackground">
-        <section>
-          <div className="titleGarage">
+        <section className="titleGarage">
+        
             <h1>My Garage</h1>
-          </div>
+         
         </section>
         <section>
           
@@ -53,12 +53,12 @@ class Garage extends Component {
               </section>
               {/* <section> */}
             <div className="botones">
-              <Link to={`/createcar/${this.props.user._id}`}>
-                <button className="garageButton">Add your car</button>
-              </Link>
-              <Link to={`/profile`}>
-                <button className="garageButton">Go back</button>
-              </Link>
+              
+                <button className="garageButton"><Link to={`/createcar/${this.props.user._id}`}>Add your car</Link></button>
+              
+              
+                <button className="garageButton"><Link to={`/profile`}>Go back</Link></button>
+              
             </div>
             {/* </section> */}
           </section>

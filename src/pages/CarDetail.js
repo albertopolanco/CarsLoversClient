@@ -71,17 +71,17 @@ class CarDetail extends Component {
         </table>
         </div>
         <div className="botones">
-            <Link to={`/garage/${this.props.user._id}`}>
-              <button className="carDetailButton">Go back</button>
-            </Link>
+            
+              <button className="carDetailsButton"><Link to={`/garage/${this.props.user._id}`}>Go back</Link></button>
+            
         {this.props.user.id === this.state._id ? (
               <>
-                <button className="carDetailButton" onClick={() => this.deleteCar()}>
+                <button className="carDetailsButton" onClick={() => this.deleteCar()}>
                   Delete
                 </button>
-                <Link to={`/editcar/${this.props.match.params.id}`}>
-                  <button className="carDetailButton">Edit car</button>
-                </Link>
+                
+                  <button className="carDetailsButton"><Link to={`/editcar/${this.props.match.params.id}`}>Edit car</Link></button>
+                
               </>
             ) : null}
           </div>

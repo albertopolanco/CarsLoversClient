@@ -140,9 +140,9 @@ class Create extends Component {
           <br />
           <input type="submit" value="Submit" />
 
-          <Link to={`/garage/${this.props.user._id}`}>
-            <button className="login-button">Go back</button>
-          </Link>
+          
+            <button className="login-button"><Link to={`/garage/${this.props.user._id}`}>Go back</Link></button>
+          
         </form>
       </div>
     );
