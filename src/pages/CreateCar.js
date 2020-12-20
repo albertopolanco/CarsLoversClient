@@ -63,14 +63,12 @@ class Create extends Component {
     upload.append("image", e.target.files[0]);
     try {
       const res = await service.handleUpload(upload);
-      // console.log(res, "yyyyyyyyyyy")
       this.setState({ image: res.secure_url });
     } catch (error) {
       console.log(error);
     }
   };
   render() {
-    // console.log(this.props.history.location.pathname.push);
     return (
       <div className="createCarBackground">
         <h1 className="titleCreate">Create your car</h1>
@@ -133,16 +131,17 @@ class Create extends Component {
           <br />
           <br />
           <label>Image: </label>
-          <input 
-          type="file" 
-          name="image"
-          onChange={(e) => this.handleFileUpload(e)} />
+          <input
+            type="file"
+            name="image"
+            onChange={(e) => this.handleFileUpload(e)}
+          />
           <br />
           <input type="submit" value="Submit" />
 
-          
-            <button className="login-button"><Link to={`/garage/${this.props.user._id}`}>Go back</Link></button>
-          
+          <button className="login-button">
+            <Link to={`/garage/${this.props.user._id}`}>Go back</Link>
+          </button>
         </form>
       </div>
     );

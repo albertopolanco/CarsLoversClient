@@ -48,11 +48,11 @@ class EditCar extends Component {
         }
       )
       .then(() => {
-      this.props.history.push(`/garage/${this.props.user._id}`);
-    })
-      .catch((error) => {
-      console.log(error);
+        this.props.history.push(`/garage/${this.props.user._id}`);
       })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   handleChangeCar = (event) => {
@@ -63,9 +63,10 @@ class EditCar extends Component {
   };
 
   handleFormEdit = (event) => {
-
     axios
-      .get(`${process.env.REACT_APP_API_URI}/cars/${this.props.match.params.id}`)
+      .get(
+        `${process.env.REACT_APP_API_URI}/cars/${this.props.match.params.id}`
+      )
       .then((edit) => {
         this.setState({
           brand: edit.data.brand,
@@ -76,14 +77,12 @@ class EditCar extends Component {
           traction: edit.data.traction,
           fuel: edit.data.fuel,
           image: edit.data.image,
-        })
-       
-    })
-    .catch((error) => console.log(error));
+        });
+      })
+      .catch((error) => console.log(error));
+  };
 
-}
-
-    handleFileUpload = async (e) => {
+  handleFileUpload = async (e) => {
     const upload = new FormData();
     upload.append("image", e.target.files[0]);
     try {
@@ -98,82 +97,81 @@ class EditCar extends Component {
     this.handleFormEdit();
   }
   render() {
-    
     return (
       <div className="editCarBackground">
         <div className="edit">
           <hr />
-        <h1>Edit your car</h1>
-        <form className="edit-info" onSubmit={this.handleFormSubmit}>
-          <label>Brand: </label>
-          <input
-            type="text"
-            name="brand"
-            value={this.state.brand}
-            onChange={(e) => this.handleChangeCar(e)}
-          />
-          <br />
-          <label>Model: </label>
-          <input
-            type="text"
-            name="model"
-            value={this.state.model}
-            onChange={(e) => this.handleChangeCar(e)}
-          />
-          <br />
-          <label>Year: </label>
-          <input
-            type="text"
-            name="year"
-            value={this.state.year}
-            onChange={(e) => this.handleChangeCar(e)}
-          />
-          <br />
-          <label>Engine: </label>
-          <input
-            type="text"
-            name="engine"
-            value={this.state.engine}
-            onChange={(e) => this.handleChangeCar(e)}
-          />
-          <br />
-          <label>Power: </label>
-          <input
-            type="text"
-            name="power"
-            value={this.state.power}
-            onChange={(e) => this.handleChangeCar(e)}
-          />
-          <br />
-          <label>Traction: </label>
-          <input
-            type="text"
-            name="traction"
-            value={this.state.traction}
-            onChange={(e) => this.handleChangeCar(e)}
-          />
-          <br />
-          <label>Fuel: </label>
-          <input
-            type="text"
-            name="fuel"
-            value={this.state.fuel}
-            onChange={(e) => this.handleChangeCar(e)}
-          />
-          <br />
-          <label>Image: </label>
-          <input
-            type="file"
-            name="image"
-            onChange={(e) => this.handleFileUpload(e)}
-          />
-          <br />
-          <input type="submit" value="Submit" />
-            
-          <Link to={`/garage/${this.props.user._id}`}>
-            <button className="login-button">Go back</button>
-          </Link>
-        </form>
+          <h1>Edit your car</h1>
+          <form className="edit-info" onSubmit={this.handleFormSubmit}>
+            <label>Brand: </label>
+            <input
+              type="text"
+              name="brand"
+              value={this.state.brand}
+              onChange={(e) => this.handleChangeCar(e)}
+            />
+            <br />
+            <label>Model: </label>
+            <input
+              type="text"
+              name="model"
+              value={this.state.model}
+              onChange={(e) => this.handleChangeCar(e)}
+            />
+            <br />
+            <label>Year: </label>
+            <input
+              type="text"
+              name="year"
+              value={this.state.year}
+              onChange={(e) => this.handleChangeCar(e)}
+            />
+            <br />
+            <label>Engine: </label>
+            <input
+              type="text"
+              name="engine"
+              value={this.state.engine}
+              onChange={(e) => this.handleChangeCar(e)}
+            />
+            <br />
+            <label>Power: </label>
+            <input
+              type="text"
+              name="power"
+              value={this.state.power}
+              onChange={(e) => this.handleChangeCar(e)}
+            />
+            <br />
+            <label>Traction: </label>
+            <input
+              type="text"
+              name="traction"
+              value={this.state.traction}
+              onChange={(e) => this.handleChangeCar(e)}
+            />
+            <br />
+            <label>Fuel: </label>
+            <input
+              type="text"
+              name="fuel"
+              value={this.state.fuel}
+              onChange={(e) => this.handleChangeCar(e)}
+            />
+            <br />
+            <label>Image: </label>
+            <input
+              type="file"
+              name="image"
+              onChange={(e) => this.handleFileUpload(e)}
+            />
+            <br />
+            <input type="submit" value="Submit" />
+
+            <Link to={`/garage/${this.props.user._id}`}>
+              <button className="login-button">Go back</button>
+            </Link>
+          </form>
         </div>
       </div>
     );

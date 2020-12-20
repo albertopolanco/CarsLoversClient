@@ -31,11 +31,11 @@ class App extends Component {
             <AnonRoute exact path="/signup" component={Signup} />
             <AnonRoute exact path="/login" component={Login} />
             <PrivateRoute exact path="/profile" component={Profile} />
-            <PrivateRoute exact path='/editUser/:id' component={EditUser} />
-            <PrivateRoute exact path='/editcar/:id' component={EditCar} />
-            <PrivateRoute exact path='/createcar/:id' component={CreateCar} />
-            <PrivateRoute exact path='/garage/:id' component={Garage} />
-            <PrivateRoute exact path='/cardetail/:id' component={CarDetail} />
+            <PrivateRoute exact path="/editUser/:id" component={EditUser} />
+            <PrivateRoute exact path="/editcar/:id" component={EditCar} />
+            <PrivateRoute exact path="/createcar/:id" component={CreateCar} />
+            <PrivateRoute exact path="/garage/:id" component={Garage} />
+            <PrivateRoute exact path="/cardetail/:id" component={CarDetail} />
             <PrivateRoute exact path="/private" component={Private} />
           </Switch>
         </div>

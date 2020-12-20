@@ -6,37 +6,35 @@ class Navbar extends Component {
   render() {
     const { user, logout, isLoggedin } = this.props;
     return (
-      <nav className='navbar'>
-       
-      <div>
-    
-        <Link to={"/"} className='home-btn'>
-          <img src="https://res.cloudinary.com/dtsag4ss2/image/upload/v1607963082/Fotos/kisspng-auto-show-car-logo-drawing-5affb4fbf28da1.0945702815267074519935_juiqfo.png" alt="Logo"/>
-        </Link>
+      <nav className="navbar">
+        <div>
+          <Link to={"/"} className="home-btn">
+            <img
+              src="https://res.cloudinary.com/dtsag4ss2/image/upload/v1607963082/Fotos/kisspng-auto-show-car-logo-drawing-5affb4fbf28da1.0945702815267074519935_juiqfo.png"
+              alt="Logo"
+            />
+          </Link>
         </div>
         {isLoggedin ? (
           <div className="navbar-logged">
-          <button className="navbar-button" onClick={this.props.logout}>
-            Logout
-          </button>
-          <button className="navbar-button">
-            <Link to={`/profile`}> 
-            Profile
-            </Link>
+            <button className="navbar-button" onClick={this.props.logout}>
+              Logout
+            </button>
+            <button className="navbar-button">
+              <Link to={`/profile`}>Profile</Link>
             </button>
           </div>
-      ) : (
-        <div className="navbar-logged">
-          <Link to="/login">
-            <button className="navbar-button">Login</button>
-          </Link>
-          <Link to="/signup">
-            <button className="navbar-button">SignUp</button>
-          </Link>
-        </div>
-      )}
-    
-    </nav>
+        ) : (
+          <div className="navbar-logged">
+            <Link to="/login">
+              <button className="navbar-button">Login</button>
+            </Link>
+            <Link to="/signup">
+              <button className="navbar-button">SignUp</button>
+            </Link>
+          </div>
+        )}
+      </nav>
     );
   }
 }

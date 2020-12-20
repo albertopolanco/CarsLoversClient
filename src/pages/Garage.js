@@ -27,12 +27,9 @@ class Garage extends Component {
     return (
       <div className="garageBackground">
         <section className="titleGarage">
-        
-            <h1>My Garage</h1>
-         
+          <h1>My Garage</h1>
         </section>
         <section>
-          
           <section className="garage">
             {this.state.cars
               ? this.state.cars.map((data, index) => {
@@ -50,19 +47,17 @@ class Garage extends Component {
                   );
                 })
               : null}
-              </section>
-              {/* <section> */}
-            <div className="botones">
-              
-                <button className="garageButton"><Link to={`/createcar/${this.props.user._id}`}>Add your car</Link></button>
-              
-              
-                <button className="garageButton"><Link to={`/profile`}>Go back</Link></button>
-              
-            </div>
-            {/* </section> */}
           </section>
-        
+          <div className="botones">
+            <button className="garageButton">
+              <Link to={`/createcar/${this.props.user._id}`}>Add your car</Link>
+            </button>
+
+            <button className="garageButton">
+              <Link to={`/profile`}>Go back</Link>
+            </button>
+          </div>
+        </section>
       </div>
     );
   }
