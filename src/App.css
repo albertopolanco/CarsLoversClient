@@ -546,7 +546,7 @@ button.navbar-button a {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: 150px;
+  margin-top: 90px;
 }
 
 .cardDetail img {
@@ -947,7 +947,7 @@ button.navbar-button a {
 
   /*---------------------CreateCar------------------*/
 
-  .createCarBackground {
+  /* .createCarBackground {
     background-image: url(https://res.cloudinary.com/dtsag4ss2/image/upload/v1608047295/Fotos/470521-Everybody039s_Gone_to_the_Rapture-in-game-CryEngine-Garage-workshop_n9us6f.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -979,9 +979,9 @@ button.navbar-button a {
 
   /*-----------------Car Details---------------*/
 
-  .cardDetail img {
+  /* .cardDetail img {
     width: 75%;
     margin-left: 110px;
     margin-bottom: 30px;
-  }
+  }  */
 }
