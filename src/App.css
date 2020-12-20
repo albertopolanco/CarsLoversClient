@@ -505,7 +505,6 @@ button.navbar-button a {
 
 .cardDetail img {
   width: 80%;
-
   border-radius: 15%;
   -webkit-box-shadow: 15px 15px 15px -13px rgba(0, 0, 0, 0.41);
   -moz-box-shadow: 15px 15px 15px -13px rgba(0, 0, 0, 0.41);
@@ -559,7 +558,7 @@ button.navbar-button a {
   -webkit-box-shadow: 15px 15px 15px -13px rgba(0, 0, 0, 0.41);
   -moz-box-shadow: 15px 15px 15px -13px rgba(0, 0, 0, 0.41);
   box-shadow: 15px 15px 15px -13px rgba(0, 0, 0, 0.41);
-  margin-left: 40px;
+  margin-left: 20px;
 }
 
 @media (min-width: 480px) {
