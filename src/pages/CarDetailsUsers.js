@@ -76,26 +76,11 @@ class CarDetail extends Component {
             <Link to={`/garage/${this.props.user._id}`}>Go back</Link>
           </button>
 
-          {this.props.user.id === this.state._id ? (
-            <>
-              <button
-                className="carDetailsButton"
-                onClick={() => this.deleteCar()}
-              >
-                Delete
-              </button>
-
+          
               <button className="carDetailsButton">
-                <Link to={`/editcar/${this.props.match.params.id}`}>
-                  Edit car
-                </Link>
-              </button>
-
-              <button className="carDetailsButton">
-              <Link to={`/cars/allcars`}>All cars</Link>
+              <Link to={`/cars/allcars`}>Users cars</Link>
             </button>
-            </>
-          ) : null}
+        
         </div>
       </div>
     );

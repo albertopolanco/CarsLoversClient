@@ -54,6 +54,10 @@ class Garage extends Component {
             </button>
 
             <button className="garageButton">
+              <Link to={`/cars/allcars`}>Users Cars</Link>
+            </button>
+
+            <button className="garageButton">
               <Link to={`/profile`}>Go back</Link>
             </button>
           </div>
